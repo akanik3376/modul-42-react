@@ -1,16 +1,29 @@
-import { useState } from 'react'
 
 import './App.css'
-
+import Blogs from './Components/Header/Blogs/Blogs'
+import Hader from './Components/Header/Hader'
+import Booksmarks from './Components/BookMarks/Booksmarks'
+import { useState } from 'react'
 function App() {
-  const [count, setCount] = useState(0)
+
+  const [bookMark, setBookMark] = useState([0])
+
+  const HandelAddToBookMark = (blog) => {
+    console.log(blog)
+  }
+
+
 
   return (
-    <>
+    <section className='max-w-5xl mx-auto'>
+      <Hader></Hader>
+      <main className='md:flex'>
+        <Blogs HandelAddToBookMark={HandelAddToBookMark}></Blogs>
+        <Booksmarks></Booksmarks>
+      </main>
 
-      <h1 className='text-3xl'>Knowledge Cafe</h1>
 
-    </>
+    </section>
   )
 }
 

@@ -1,0 +1,47 @@
+[
+    {
+        "id": 1,
+        "cover_img": "https://i.ibb.co/ssNWZzk/desk-arrangement-with-notebooks-pencils.jpg",
+        "title": "AdventureTime",
+        "host_img": "https://example.com/host1.jpg",
+        "host_name": "John Doe",
+        "time": 120,
+        "published_date": "2023-09-12"
+    },
+    {
+        "id": 2,
+        "cover_img": "https://i.ibb.co/6vjK7Q3/high-angle-desktop-with-laptop-copy-space.jpg",
+        "title": "Symposium123",
+        "host_img": "https://example.com/host2.jpg",
+        "host_name": "Jane Smith",
+        "time": 180,
+        "published_date": "2023-09-13"
+    },
+    {
+        "id": 3,
+        "cover_img": "https://i.ibb.co/7zVP4ZT/notebook-coffee-cup-top-view.jpg",
+        "title": "CookingMasterclass",
+        "host_img": "https://example.com/host3.jpg",
+        "host_name": "Alice Johnson",
+        "time": 90,
+        "published_date": "2023-09-14"
+    },
+    {
+        "id": 4,
+        "cover_img": "https://i.ibb.co/YpwcBdh/top-view-workspace-with-notebook-succulent-plant.jpg",
+        "title": "ArtExhibition",
+        "host_img": "https://example.com/host4.jpg",
+        "host_name": "Bob Anderson",
+        "time": 60,
+        "published_date": "2023-09-15"
+    },
+    {
+        "id": 5,
+        "cover_img": "https://i.ibb.co/pWv6PW8/top-view-workspace-with-notepad-succulent-plant.jpg",
+        "title": "MusicConcert",
+        "host_img": "https://example.com/host5.jpg",
+        "host_name": "Eva Martinez",
+        "time": 150,
+        "published_date": "2023-09-16"
+    }
+]

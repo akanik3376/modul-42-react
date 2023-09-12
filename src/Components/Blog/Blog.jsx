@@ -2,14 +2,14 @@ import PropTypes from 'prop-types';
 import { FaBookmark } from 'react-icons/fa';
 
 
-const Blog = ({ blog, HandelAddToBookMark }) => {
+const Blog = ({ blog, HandelAddToBookMark, HandelReadingTime }) => {
     // console.log(blog)
-    const { cover_img, title, host_img, host_name, published_date, time } = blog
+    const { cover_img, title, host_name, published_date, time, id } = blog
     return (
         <div className="my-10">
             <img src={cover_img} alt="" />
             <div>
-                <img className=' w-full' src={host_img} alt="" />
+                {/* <img className=' w-full' src={host_img} alt="" /> */}
                 <div className="flex justify-between items-center">
                     <div>
                         <p>{host_name}</p>
@@ -22,12 +22,13 @@ const Blog = ({ blog, HandelAddToBookMark }) => {
                 </div>
                 <h2 className="text-3xl font-semibold">{title}</h2>
             </div>
-            <button className="text-violet-700 underline">Mark as read</button>
+            <button onClick={() => HandelReadingTime(time, id)} className="text-violet-700 underline">Mark as read</button>
         </div>
     );
 };
 
 Blog.propTypes = {
     blog: PropTypes.object.isRequired
+
 }
 export default Blog;

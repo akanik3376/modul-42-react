@@ -6,20 +6,31 @@ import Booksmarks from './Components/BookMarks/Booksmarks'
 import { useState } from 'react'
 function App() {
 
-  const [bookMark, setBookMark] = useState([0])
+  const [bookMark, setBookMark] = useState([])
+  const [readingTime, setReadingTime] = useState(0)
 
   const HandelAddToBookMark = (blog) => {
-    console.log(blog)
+    const newBookMark = [...bookMark, blog]
+    setBookMark(newBookMark)
   }
 
+  const HandelReadingTime = (time, id) => {
+
+    setReadingTime(readingTime + time)
+
+
+    // remove the read blog from bookmark
+    const remainingBookMark = bookMark.filter(bookMark => bookMark.id !== id)
+    setBookMark(remainingBookMark)
+  }
 
 
   return (
     <section className='max-w-5xl mx-auto'>
       <Hader></Hader>
       <main className='md:flex'>
-        <Blogs HandelAddToBookMark={HandelAddToBookMark}></Blogs>
-        <Booksmarks></Booksmarks>
+        <Blogs HandelAddToBookMark={HandelAddToBookMark} HandelReadingTime={HandelReadingTime}></Blogs>
+        <Booksmarks bookMark={bookMark} readingTime={readingTime}></Booksmarks>
       </main>
 
 

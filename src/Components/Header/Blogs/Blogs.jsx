@@ -3,7 +3,7 @@ import { useState } from "react";
 import Blog from "../../Blog/Blog";
 import PropTypes from 'prop-types';
 
-const Blogs = ({ HandelAddToBookMark }) => {
+const Blogs = ({ HandelAddToBookMark, HandelReadingTime }) => {
     const [blogs, setBlogs] = useState([]);
     useState(() => {
         fetch('Blogs.json')
@@ -19,7 +19,7 @@ const Blogs = ({ HandelAddToBookMark }) => {
             <div>
                 {
                     blogs.map(blog => <Blog blog={blog} key={blog.id}
-                        HandelAddToBookMark={HandelAddToBookMark}></Blog>)
+                        HandelAddToBookMark={HandelAddToBookMark} HandelReadingTime={HandelReadingTime}></Blog>)
                 }
             </div>
         </div>
